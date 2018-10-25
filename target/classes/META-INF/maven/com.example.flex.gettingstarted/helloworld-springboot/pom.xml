@@ -24,13 +24,7 @@
   <name>helloworld-springboot</name>
   <description>Demo project for Spring Boot</description>
 
-  <parent>                              <!-- Get parameters and allow bulk testing -->
-    <artifactId>getting-started-java</artifactId>
-    <groupId>com.example</groupId>
-    <version>1.0.0</version>
-    <relativePath>..</relativePath>
-  </parent>
-
+  
   <properties>
     <java.version>1.8</java.version>
     <maven.compiler.source>${java.version}</maven.compiler.source> <!-- REQUIRED -->

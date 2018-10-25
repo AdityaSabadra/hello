@@ -20,6 +20,7 @@ import java.util.concurrent.atomic.AtomicLong;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -33,6 +34,7 @@ public class HelloworldApplication {
     private final AtomicLong counter = new AtomicLong();
 
     @GetMapping("/hello-world")
+    @CrossOrigin(origins = "http://localhost:8080/hello-world")
     @ResponseBody
     public Products sayHello(@RequestParam(name="name", required=false, defaultValue="Stranger") String name) {
         return new Products(counter.incrementAndGet(), String.format(template, name));
